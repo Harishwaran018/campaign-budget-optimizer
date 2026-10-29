@@ -1,0 +1,8 @@
+{
+    "model": "Robust Gradient Boosting Regressor (Huber Loss & Engineered Pre-Campaign Features)",
+    "MAE": 16930.606818125263,
+    "RMSE": 27643.118114359222,
+    "R2": 0.22549687933594065,
+    "training_samples": 1440,
+    "testing_samples": 360
+}
