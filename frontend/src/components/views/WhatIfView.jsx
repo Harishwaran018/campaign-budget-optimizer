@@ -55,7 +55,7 @@ export default function WhatIfView() {
         <ShieldCheck size={18} className="text-emerald" />
         <div>
           <strong>Live ML Query Engine:</strong> Clicking "Run What-If Simulation" sends a real request
-          to <code>POST http://https://campaign-budget-optimizer.onrender.com/optimize</code> with your hypothetical budget. Both scenarios
+          to <code>POST https://campaign-budget-optimizer.onrender.com/optimize</code> with your hypothetical budget. Both scenarios
           are solved by the actual Scipy SLSQP optimizer.
         </div>
       </div>
