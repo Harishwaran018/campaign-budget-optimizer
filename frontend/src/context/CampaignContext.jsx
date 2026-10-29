@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://https://campaign-budget-optimizer.onrender.com';
 import { CampaignContext } from "./campaignContextDef";
 import { productOptions, PLATFORM_COLORS } from "../constants/campaign";
 
@@ -99,7 +99,7 @@ export function CampaignProvider({ children }) {
         err.response?.data?.detail?.[0]?.msg ||
         err.response?.data?.detail ||
         (err.message === "Network Error"
-          ? "FastAPI backend is offline or unreachable on http://127.0.0.1:8000. Start backend with 'uvicorn main:app --reload'."
+          ? "FastAPI backend is offline or unreachable on http://https://campaign-budget-optimizer.onrender.com. Start backend with 'uvicorn main:app --reload'."
           : "Optimization request failed. Please check inputs and try again.");
       setError(msg);
       setLoading(false);
@@ -140,7 +140,7 @@ export function CampaignProvider({ children }) {
         err.response?.data?.detail?.[0]?.msg ||
         err.response?.data?.detail ||
         (err.message === "Network Error"
-          ? "FastAPI backend is offline or unreachable on http://127.0.0.1:8000."
+          ? "FastAPI backend is offline or unreachable on http://https://campaign-budget-optimizer.onrender.com."
           : "What-If simulation request failed.");
       setWhatIfError(msg);
       setWhatIfLoading(false);

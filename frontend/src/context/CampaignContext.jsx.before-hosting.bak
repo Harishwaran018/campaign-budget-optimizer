@@ -82,7 +82,7 @@ export function CampaignProvider({ children }) {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/optimize", {
+      const response = await axios.post("http://https://campaign-budget-optimizer.onrender.com/optimize", {
         total_budget: targetBudget,
         market: market,
       });
@@ -98,7 +98,7 @@ export function CampaignProvider({ children }) {
         err.response?.data?.detail?.[0]?.msg ||
         err.response?.data?.detail ||
         (err.message === "Network Error"
-          ? "FastAPI backend is offline or unreachable on http://127.0.0.1:8000. Start backend with 'uvicorn main:app --reload'."
+          ? "FastAPI backend is offline or unreachable on http://https://campaign-budget-optimizer.onrender.com. Start backend with 'uvicorn main:app --reload'."
           : "Optimization request failed. Please check inputs and try again.");
       setError(msg);
       setLoading(false);
@@ -126,7 +126,7 @@ export function CampaignProvider({ children }) {
     setWhatIfLoading(true);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/optimize", {
+      const response = await axios.post("http://https://campaign-budget-optimizer.onrender.com/optimize", {
         total_budget: numericBudget,
         market: market,
       });
@@ -139,7 +139,7 @@ export function CampaignProvider({ children }) {
         err.response?.data?.detail?.[0]?.msg ||
         err.response?.data?.detail ||
         (err.message === "Network Error"
-          ? "FastAPI backend is offline or unreachable on http://127.0.0.1:8000."
+          ? "FastAPI backend is offline or unreachable on http://https://campaign-budget-optimizer.onrender.com."
           : "What-If simulation request failed.");
       setWhatIfError(msg);
       setWhatIfLoading(false);
